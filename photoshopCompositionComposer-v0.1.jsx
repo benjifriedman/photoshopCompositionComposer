@@ -95,8 +95,6 @@ function combine() {
 
       savePath = Folder.selectDialog("Select an output folder");
 
-      var includePSDFiles = confirm('Would you like to include corresponding PSD documents?')
-
       for(var i = 0; i < artLayerCollectionCollectionCombinations.length; i++) {
         hideAllArtLayers();
         var artLayerNames = [];
@@ -106,8 +104,7 @@ function combine() {
           artLayerNames.push(artLayer.parent.name);
           artLayerNames.push(artLayer.name);
         }
-        saveDocumentAsPNG(savePath + '/' + normalizeSaveFileName(artLayerNames.join('')).substr(0, 254));
-        if(includePSDFiles) saveDocumentAsPSD(savePath + '/' + normalizeSaveFileName(artLayer.parent.name + artLayerNames.join('')).substr(0, 254));
+        saveDocumentAsJPG(savePath + '/' + normalizeSaveFileName(artLayerNames.join('')).substr(0, 254));
       }
 }
 
@@ -141,8 +138,8 @@ function normalizeSaveFileName(name) {
   return name;
 }
 
-function saveDocumentAsPNG(path) {
-  app.activeDocument.saveAs(new File(path), new PNGSaveOptions());
+function saveDocumentAsJPG(path) {
+  app.activeDocument.saveAs(new File(path), new JPEGSaveOptions());
 }
 
 function saveDocumentAsPSD(path) {
