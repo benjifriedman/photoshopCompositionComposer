@@ -2,7 +2,7 @@
 ## Original code here: https://github.com/mechanicious/photoshopCompositionComposer
 ### I modified the script so it would save jpgs and not pngs, and not ask to save photoshop files for each file output
 
-This script will create unique compositions out of members contained within the top-level document groups, and save them into a desired location both as a `png`- and a `psd`-file. Tested on Photoshop CC 2015.
+This script will create unique compositions out of members contained within the top-level document groups, and save them into a desired location both as a `jpg` file. Tested on Photoshop CC 2022.
 
 ## Usage
 1. See the Example and the Preview below to learn how it works
